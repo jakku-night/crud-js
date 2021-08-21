@@ -1,4 +1,18 @@
 {
-    "presets": ["@babel/preset-env", "@babel/preset-react"],
-    "plugins": ["@babel/plugin-proposal-private-property-in-object", "@babel/plugin-transform-arrow-functions", "@babel/plugin-transform-destructuring"]
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                "targets": {
+                    "node": "current"
+                }
+            }
+        ],
+         "@babel/preset-react"
+    ],
+    "plugins": [
+        "@babel/plugin-proposal-private-property-in-object",
+        "@babel/plugin-transform-arrow-functions",
+        "@babel/plugin-transform-destructuring"
+    ]
 }

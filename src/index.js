@@ -1,10 +1,12 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Test from './components/Test';
 
 const App = () => {
     return (
         <Fragment>
-            <h3>Hola</h3>
+            <h3>Hello doumo!</h3>
+            <Test />
         </Fragment>
     );
 };

@@ -8,6 +8,7 @@ const WebpackDevMiddleware = require('webpack-dev-middleware');
 const webpack_config = require('./webpack.config');
 const path = require('path');
 const tester = require('./routes/index');
+const test = require('./routes/api/test');
 
 const app = express();
 
@@ -28,10 +29,15 @@ app.use(WebpackDevMiddleware(webpack(webpack_config)));
 app.use(cors(corsOptions));
 app.use(fileupload());
 app.use(morgan('dev'));
+app.use((req, res, next) => {
+    console.log(req.protocol.toUpperCase(), req.method.toUpperCase(), req.url);
+    next();
+});
 
 // Routes:
 
 app.use(tester);
+app.use(test);
 
 // Startup:
 
