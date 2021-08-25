@@ -90,7 +90,7 @@ const Test = () => {
 
     return (
         <Fragment>
-            <table id="table" >
+            <table id="table" border="1px" border-color="#FFFFFF" >
                 <thead>
                     <tr>
                         <td>Task</td>
